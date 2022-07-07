@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-cont {
+  height: 100vh;
+  width: 100vw;
+  background-color: #bdc3c7;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.back {
+  position: absolute;
+  bottom: 5rem;
+  right: 4rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: black;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.media-cont {
+  height: 12rem;
+  width: 12rem;
+  border: 3px solid white;
+}
+
+.media {
+  width: 100%;
+  height: calc(100% - 2rem - 2rem);
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.download {
+  background-color: black;
+  color: white;
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.video-cont {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+.action-cont {
+  height: 10rem;
+  width: 5rem;
+  position: absolute;
+  right: 3rem;
+  top: calc((100% - 10rem) / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.action-btn {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-btn > * {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.record-btn {
+  background-color: red;
+}
+
+.scale-record {
+  animation-name: record-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.capture-btn {
+  background-color: white;
+}
+
+.scale-capture {
+  animation-name: capture-animation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes capture-animation {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes record-animation {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.timer-cont {
+  position: absolute;
+  height: 3rem;
+  width: 7.2rem;
+  bottom: 4rem;
+  left: 3rem;
+}
+
+.timer {
+  font-size: 2rem;
+  color: aqua;
+  display: none;
+}
+
+.filter-cont {
+  position: absolute;
+  left: 3rem;
+  height: 16rem;
+  width: 6rem;
+  background-color: aqua;
+  top: calc((100% - 16rem) / 2);
+  z-index: 5;
+}
+
+.filter {
+  height: 4rem;
+  width: 100%;
+  background-image: url("https://picsum.photos/seed/picsum/200/300");
+  object-fit: fill;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: color-burn;
+  cursor: pointer;
+}
+
+.orange {
+  background-color: rgba(230, 153, 11, 0.264);
+}
+
+.yellow {
+  background-color: rgba(243, 243, 127, 0.495);
+}
+
+.pink {
+  background-color: rgba(143, 106, 111, 0.453);
+}
+
+.filter-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.gallery {
+  position: absolute;
+  right: 3rem;
+  bottom: 5rem;
+  z-index: 5;
+  cursor: pointer;
+}
+.gallery-icon {
+  color: white;
+  font-size: 2rem;
+}
